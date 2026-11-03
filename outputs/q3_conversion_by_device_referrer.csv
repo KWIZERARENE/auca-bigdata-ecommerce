@@ -1,0 +1,16 @@
+device,referrer,sessions,flagged_converted,with_transaction,txn_conv_pct,flagged_conv_pct
+desktop,email,13198,2705,1714,12.99,20.50
+desktop,social,13216,2673,1709,12.93,20.23
+mobile,search_engine,13204,2775,1706,12.92,21.02
+tablet,search_engine,13272,2727,1714,12.91,20.55
+tablet,email,13409,2798,1722,12.84,20.87
+mobile,email,13178,2700,1665,12.63,20.49
+desktop,direct,13447,2692,1697,12.62,20.02
+desktop,search_engine,13324,2721,1672,12.55,20.42
+mobile,direct,13505,2730,1686,12.48,20.21
+tablet,affiliate,13414,2708,1669,12.44,20.19
+mobile,affiliate,13296,2632,1654,12.44,19.80
+tablet,social,13593,2729,1687,12.41,20.08
+desktop,affiliate,13304,2688,1646,12.37,20.20
+mobile,social,13537,2719,1673,12.36,20.09
+tablet,direct,13103,2610,1590,12.13,19.92

@@ -1,0 +1,12 @@
+# MongoDB + HBase (Thrift on 9090). Verify the HBase image tag/ports on Docker Hub before use.
+services:
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+    volumes: ["mongo_data:/data/db"]
+  hbase:
+    image: harisekhon/hbase
+    hostname: hbase
+    ports: ["9090:9090", "16010:16010", "2181:2181"]
+volumes:
+  mongo_data:
