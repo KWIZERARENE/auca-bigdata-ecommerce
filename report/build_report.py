@@ -8,8 +8,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle, KeepTogether, PageBreak
 from reportlab.graphics.shapes import Drawing, Rect, String, Line, Polygon
 
-AUTHOR = "YOUR FULL NAME"
-STUDENT_ID = "YOUR STUDENT ID"
+AUTHOR = "KWIZERA Rene"
+STUDENT_ID = "101379"
 REPO = "https://github.com/KWIZERARENE/auca-bigdata-ecommerce"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "outputs"
 PDF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Technical_Report.pdf")
