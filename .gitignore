@@ -11,5 +11,7 @@ spark-warehouse/
 .DS_Store
 Thumbs.db
 report/fix_toc.py
+report/Technical_Report.pdf
 outputs/*.crc
 run.log
+report notes/
