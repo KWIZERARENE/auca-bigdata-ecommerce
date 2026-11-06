@@ -1,0 +1,6 @@
+stage,count,pct,drop_pct
+All sessions,100000,100.0,0.0
+Viewed a product page,98764,98.8,1.2
+Added to cart,64987,65.0,34.2
+Reached checkout,28979,29.0,55.4
+Purchased,20286,20.3,30.0

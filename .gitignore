@@ -1,0 +1,15 @@
+.venv/
+data/
+parquet/
+*.jsonl
+*.parquet
+__pycache__/
+stream_in/
+spark-warehouse/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+report/fix_toc.py
+outputs/*.crc
+run.log

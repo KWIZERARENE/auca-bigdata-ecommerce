@@ -1,0 +1,16 @@
+# HBase shell commands (docker compose exec hbase hbase shell)   -- same schema that hbase/load.py creates
+create 'user_sessions', {NAME=>'info', VERSIONS=>1}, {NAME=>'pv', VERSIONS=>1}, {NAME=>'cart', VERSIONS=>1}
+create 'product_metrics', {NAME=>'m', VERSIONS=>1}
+
+# Optional: pre-split regions by user id range so writes spread across region servers at scale
+# create 'user_sessions', {NAME=>'info'}, {NAME=>'pv'}, {NAME=>'cart'}, SPLITS=>['user_002500','user_005000','user_007500']
+
+# --- sample queries (shell) ---
+# latest 5 sessions of one user (newest first because of the reverse timestamp in the key)
+scan 'user_sessions', {ROWPREFIXFILTER=>'user_000042#', LIMIT=>5, COLUMNS=>['info']}
+# every column of the newest session
+scan 'user_sessions', {ROWPREFIXFILTER=>'user_000042#', LIMIT=>1}
+# one product's daily metrics for October 2026
+scan 'product_metrics', {STARTROW=>'prod_00123#20261001', STOPROW=>'prod_00123#20261031~'}
+# how many sessions loaded
+count 'user_sessions', INTERVAL=>50000
