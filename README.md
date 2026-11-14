@@ -6,7 +6,7 @@ Apache Spark, and combined in an integrated funnel analysis.
 
 | Part | What | Where |
 |---|---|---|
-| Data | Seeded generator + validator | `data_gen/` |
+| Data | Dataset generator (`dataset_generator.py`) + validator (`validate.py`) | `data_gen/` |
 | 1a | MongoDB document model, loader, 4 aggregations, index evidence | `mongo/` |
 | 1b | HBase row-key design, loader, 3 query types | `hbase/` |
 | 2 | Spark cleaning, bought-together analysis, Spark SQL | `spark/` |
@@ -42,7 +42,7 @@ docker compose up -d          # MongoDB on 27017, HBase Thrift on 9090 (give HBa
 
 ```bash
 # 0. Data (seed 42; defaults = 10,000 users, 5,000 products, 200,000 sessions, 50,000 transactions)
-python data_gen/generate.py
+python data_gen/dataset_generator.py
 python data_gen/validate.py data
 
 # 1a. MongoDB
@@ -66,7 +66,7 @@ python integration/funnel.py         # writes outputs/funnel.csv
 python viz/charts.py                 # writes outputs/chart1..4_*.png
 ```
 
-Smaller/faster run: `NUM_SESSIONS=20000 NUM_TRANSACTIONS=5000 python data_gen/generate.py`.
+Smaller/faster run: `NUM_SESSIONS=20000 NUM_TRANSACTIONS=5000 python data_gen/dataset_generator.py`.
 
 ## Design notes
 

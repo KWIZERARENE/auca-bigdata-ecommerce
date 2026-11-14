@@ -1,4 +1,4 @@
-"""Sanity checks for the generated dataset (run after generate.py).
+"""Sanity checks for the generated dataset (run after dataset_generator.py).
 Usage: python data_gen/validate.py [data_dir]
 Checks: record counts, duplicate ids, total = subtotal - discount, empty items,
 session linkage, null rates, referential integrity of products/users, subcategory presence."""
